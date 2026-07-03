@@ -1,0 +1,11 @@
+body {
+  user-select: none; /* Prevents text highlighting */
+  -webkit-user-select: none;
+  cursor: default; /* Keeps the standard pointer arrow everywhere */
+}
+
+input,
+textarea {
+  user-select: text;
+  -webkit-user-select: text;
+}

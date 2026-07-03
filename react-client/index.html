@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wifi Share</title>
+    <link href="/beer.min.css" rel="stylesheet" />
+    <script type="module" src="/beer.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      document.addEventListener("contextmenu", (event) =>
+        event.preventDefault()
+      );
+
+      document.addEventListener("keydown", (event) => {
+        if (
+          event.key === "F12" ||
+          (event.ctrlKey &&
+            event.shiftKey &&
+            (event.key === "I" || event.key === "C" || event.key === "J")) ||
+          (event.ctrlKey && event.key === "U")
+        ) {
+          event.preventDefault();
+        }
+      });
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
